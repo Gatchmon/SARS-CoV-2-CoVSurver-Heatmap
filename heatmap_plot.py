@@ -28,32 +28,11 @@ dataframe = dataframe.astype({"RUN 47": int, "RUN 48": int,
                               "RUN 49": int, "RUN 50": int, "RUN 51": int})
 print(dataframe)
 dataframe = dataframe.sort_values(by='RUN 50', ascending=False)
-dataframe.to_excel('test.xlsx')
+dataframe.to_excel('exercise.xlsx')
 ax = plt.axes()
 fig, ax = plt.subplots(figsize=(10,40))
-ax.set_title('Frequency of Mutations of Spike Glycoprotein Samples from GSI Lab')
+ax.set_title('Frequency of Mutations of Spike Glycoprotein Samples')
 sns.heatmap(dataframe, xticklabels="auto", yticklabels=True, annot=True, cmap="YlGnBu", annot_kws={"fontsize":8}, ax=ax)
 sns.set(font_scale=0.2)
 plt.tight_layout()
 plt.show()
-
-
-
-# data = pd.read_csv('run50_perlocation.csv', sep=',')
-#
-# spike = []
-# count = []
-#
-# for i,j in zip(data['Mutation'], data['Count']):
-#     if 'Spike' in i:
-#         spike.append(i[6:])
-#         count.append(j)
-#
-# dataframe = pd.DataFrame()
-#
-# dataframe['Spike'] = spike
-# dataframe['RUN 50'] = count
-#
-# dataframe = dataframe.set_index('Spike')
-# dataframe = dataframe.sort_values(by='RUN 50', ascending=False)
-# print(dataframe)
