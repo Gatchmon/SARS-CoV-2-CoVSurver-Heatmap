@@ -1,4 +1,4 @@
-# SARS-CoV-2-GISAID-Heatmap
+# SARS-CoV-2-CoVSurver-Heatmap
 Repository to calculate frequency of mutations and plot to heatmap from SARS-CoV-2 GISAID data, specifically CoVSurver mutations app
 for more information about CoVSurver you may access it here https://www.gisaid.org/epiflu-applications/covsurver-mutations-app/
 
